@@ -3,6 +3,7 @@
 2. Make docker up and running by (to run mosquitto): `docker-compose up -d --build`
 3. Run the app: `npm run start:dev`
 4. Then publish an event from a local app that supports mqtt (like MQTTX):
+5. This issue happens with `Guard`. See `AppGuard` in the root.
 
 ![mqtt](./mqtt.png)
 
