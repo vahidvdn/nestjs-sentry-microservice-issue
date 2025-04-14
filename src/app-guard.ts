@@ -1,17 +1,14 @@
 import { ExecutionContext, Injectable } from '@nestjs/common';
-import { Reflector } from '@nestjs/core';
 
 @Injectable()
-// export class JwtAuthGuard extends AuthGuard('jwt') {
 export class MyAppGuard {
-  constructor(private reflector: Reflector) {
-    // super();
-  }
+  constructor() {}
 
   canActivate(context: ExecutionContext) {
     console.log(context.getType()); // rpc
 
-    // throw new RpcException('UnauthorizedException');
+    // this work in http request
+    // but in mqtt, it generates a weird error
     return false;
   }
 }
