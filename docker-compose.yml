@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+    networks:
+      - tdk-api_network
+
+networks:
+  tdk-api_network:
+    name: tdk-api_network
+
+volumes:
+
+
